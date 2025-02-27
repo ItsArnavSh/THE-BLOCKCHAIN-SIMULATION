@@ -16,7 +16,7 @@ void delete_transactions_file() {
     }
 }
 
-int main()
+int min()
 {
     // Create mempool instance to retrieve transactions
     // as soon as this instance is created the vector of json objects in which the json files of all the broadcasted transactions will be collected
@@ -31,11 +31,11 @@ int main()
     Wallet w1;  // automatically creates an instance of private and a public key
 
     // ✅ Step 2: Create two test transactions
-    string receiver1 = "8455fw5665651carca";  // enter the public addresses of the receivers from their wallets
+    string receiver1 = "8455fw5665651carca";  // enter the public key of the receivers from their wallets
     string receiver2 = "wlkfchbwoiurh4u904u";
-    
+
     Transaction t1(w1.public_key, receiver1, 6);   // creating transactions
-    t1.save_to_file();    // saving transactions to json files ..... these will be broadcasted over the network 
+    t1.save_to_file();    // saving transactions to json files ..... these will be broadcasted over the network
 
     Transaction t2(w1.public_key, receiver2, 10);
     t2.save_to_file();

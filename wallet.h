@@ -14,7 +14,7 @@ public:
     string priv_key;
     string public_key;
 
-    
+
     Wallet();
 
     // Function Declarations

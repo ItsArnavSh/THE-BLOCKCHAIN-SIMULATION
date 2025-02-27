@@ -41,7 +41,7 @@ void Transaction::save_to_file() {
     outFile << t_list.dump(4); // Pretty-print JSON with indentation
     outFile.close();
 
-    cout << "\nThe transaction has been converted to JSON format and saved in transactions.json." << endl;
+    //cout << "\nThe transaction has been converted to JSON format and saved in transactions.json." << endl;
 }
 
 // Display transaction details
@@ -55,8 +55,8 @@ void Transaction::showTransaction() {
 // Uncomment below if you want to **test `transaction.cpp` independently**
 /*
 int main() {
-    Wallet sender_wallet;  
-    string sender_public_key = sender_wallet.public_key;  
+    Wallet sender_wallet;
+    string sender_public_key = sender_wallet.public_key;
 
     cout << "\n Your public key (auto-retrieved from wallet): " << sender_public_key.substr(0, 20) << "..." << endl;
 

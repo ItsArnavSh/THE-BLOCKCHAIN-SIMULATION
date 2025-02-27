@@ -5,14 +5,15 @@
 Blockchain::Blockchain()
 {
     vector<string> empty_transactions;
-    block genesis_block(0, "00000", empty_transactions); //creation of the genesis block 
+    block genesis_block(0, "00000", empty_transactions); //creation of the genesis block
     chain.push_back(genesis_block);
-    cout << "\nThe genesis block has been created and successfully added to the blockchain!!"; 
+    cout << "\nThe genesis block has been created and successfully added to the blockchain!!";
 }
 
 //this will directly take transactions in string format and start the mining process immediately/automatically
 void Blockchain::add_block(vector<string> transactions)
 {
+    //transactions.json se ye jo transactions hai ye isme save honi chahiye
     string prev_hash = chain.back().curr_block_hash;
     block new_block(chain.size(), prev_hash, transactions);  //block constructor and mining
     //the size of the chain will be the block's index only.
