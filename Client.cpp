@@ -6,8 +6,8 @@
 #include <thread>
 
 // List of predefined IPs to send transactions to
-std::vector<std::string> server_ips = {"127.0.0.1", "192.168.1.100", "192.168.1.101"};
-const vector<unsigned short> port = {8080,8000,8010};
+std::vector<std::string> server_ips = {"127.0.0.1", "192.168.246.31", "192.168.246.29"};
+const vector<unsigned short> port = {8080,8080,8080};
 
 void send_json(const std::string& host, unsigned short port, const json& data) {
     try {
